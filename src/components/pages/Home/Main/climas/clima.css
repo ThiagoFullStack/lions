@@ -1,0 +1,92 @@
+/* Estilo básico da seção */
+.climate-section {
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    color: var(--branco);
+    padding: 40px 0;
+    margin: 5%;
+    margin-top: 20px;
+}
+
+/* Estilo do título */
+.section-title {
+    font-size: 4rem;
+    color: var(--branco);
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+/* Wrapper para as duas divs principais */
+.content-wrapper {
+    display: flex;
+    width: 100%;
+    margin-left: 10%;
+    gap: 0; 
+}
+
+/* Primeira Div - Imagem que ocupa a div toda */
+.full-image-div {
+    flex: 1; 
+}
+
+.full-image {
+    width: 100%;
+    height: 85%;
+    object-fit: fill; /* Ajusta a imagem ao espaço, mantendo proporção */ 
+}
+
+
+/* Segunda Div - Dividida em três partes */
+.split-div {
+    flex: 1;
+    display: flex;
+    flex-direction: column; 
+    gap: 0;
+}
+
+/* Parte superior dividida em duas partes */
+.top-section {
+    display: flex;
+    width: 80%;
+    height: 40%; /* Ocupa metade da altura da segunda div */ 
+}
+
+.half-image {
+    width: 50%;
+    height: auto;
+    object-fit: fill; 
+}
+
+/* Parte inferior ocupando a largura toda */
+.bottom-section {
+    height: 50%; /* Ocupa metade da altura da segunda div */ 
+}
+
+.bottom-image {
+    width: 80%;
+    height: 90%;
+    object-fit: fill;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+    }
+
+    .split-div, .full-image-div {
+        height: auto;
+    }
+
+    .top-section, .bottom-section {
+        height: auto;
+    }
+}

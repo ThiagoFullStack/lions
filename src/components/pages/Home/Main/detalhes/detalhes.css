@@ -1,0 +1,110 @@
+/* Estilo da seção */
+.jeep-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    color: var(--branco);
+    margin-top: 150px;
+}
+
+/* Título principal da seção */
+.section-titleJeep {
+    font-size: 4rem;
+    color: var(--branco);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Wrapper para as duas divisões (texto e imagem) */
+.content-wrapperJeep {
+    display: flex;
+    gap: 50px;
+    width: 100%;
+    max-width: 1200px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Primeira Div - Texto e retângulo */
+.text-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 600px;
+    padding: 20px;
+}
+
+/* Retângulo transparente com borda */
+.text-box {
+    border: 8px solid var(--azul-claro);
+    padding: 10px 80px 20px 60px;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Títulos dentro do retângulo */
+.box-title {
+    font-size: 4rem;
+    color: var(--branco);
+    margin: 0;
+}
+
+.box-subtitle {
+    font-size: 3rem;
+    color: var(--azul-claro);
+    margin: 0;
+}
+
+/* Descrição abaixo do retângulo */
+.description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--branco);
+}
+
+/* Segunda Div - Imagem */
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.renegade-image {
+    max-width: 800px;
+    height: 700px;
+    border-radius: 10px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .section-titleJeep {
+        font-size: 2.5rem;
+    }
+
+    .content-wrapperJeep {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .text-box {
+        padding: 15px;
+    }
+
+    .box-title {
+        font-size: 1.8rem;
+    }
+
+    .box-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .description {
+        font-size: 1rem;
+        text-align: center;
+    }
+}

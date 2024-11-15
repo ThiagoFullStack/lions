@@ -1,0 +1,77 @@
+/* Variáveis de cores */
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  --azul-claro: #007bff;
+  --azul-escuro: #009FD7;
+  --preto: #000;
+  --branco: #fff;
+  --laranja: #DC3E21;
+  --cinza: #544F4F;
+  --cinza-escuro: #333;
+  --amarelo: #F89500;
+  --vermelho: #8C0202;
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+  font-family: Arial, sans-serif;
+  background-color: var( --preto );
+  color: var( --preto );
+  line-height: 1.6;
+}
+
+/* Container centralizado */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Cabeçalho básico */
+header {
+  background-color: var(--header-bg-color);
+  color: var( --preto );
+  padding: 10px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Estilos de botão */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: var( --azul-escuro );
+  color: var( --branco );
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var( --azul-claro );
+  border: 2px solid  var(--azul-claro);
+}
+
+/* Links */
+a {
+  color: var( --preto );
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

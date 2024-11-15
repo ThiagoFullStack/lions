@@ -1,0 +1,85 @@
+/* Seção principal */
+.detalhes {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 50px;
+    align-items: center; 
+}
+
+/* Logo no topo */
+.detalhes-logo {
+    width: 30%; 
+    padding-bottom: 50px;
+}
+
+.detalhes-logo img {
+    width: 100%; 
+    height: auto;
+    object-fit: contain; 
+}
+
+/* Container principal das imagens */
+.detalhes-images {
+    display: flex;
+    flex-direction: column; 
+    gap: 20px;
+    width: 100%; 
+    max-width: 1200px; 
+    align-items: center; 
+}
+
+/* Imagem principal (maior) */
+.detalhes-main-image {
+    width: 100%; 
+    display: flex;
+    justify-content: center; 
+}
+
+.detalhes-main-image img {
+    width: 100%; 
+    height: auto; 
+    border-radius: 8px;
+    object-fit: cover; 
+}
+
+/* Container para as três imagens menores */
+.detalhes-small-images {
+    display: flex;
+    gap: 10px; 
+    width: 100%;
+    height: auto; 
+    justify-content: space-between; 
+}
+
+/* Estilo padrão para imagens menores */
+.detalhes-small-images .small-image {
+    flex: 1;
+    max-width: 32%;
+    border-radius: 8px;
+    object-fit: cover; 
+    width: 100%; 
+    height: auto; 
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .detalhes {
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .detalhes-logo {
+        width: 50%; 
+    }
+
+    .detalhes-small-images {
+        gap: 10px; 
+        flex-wrap: wrap; /* Quebra as imagens em linha */
+        justify-content: center; 
+    }
+
+    .detalhes-small-images .small-image {
+        max-width: 100%; 
+    }
+}

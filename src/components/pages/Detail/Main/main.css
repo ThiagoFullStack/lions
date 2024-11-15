@@ -1,0 +1,171 @@
+/* Seção principal */
+.detalhes-carro {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    color: var(--branco);
+}
+
+.container-detalhes {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    gap: 30px;
+}
+
+.dlImage {
+    opacity: 0.5;
+    width: 50%;
+}
+
+/* Lado esquerdo */
+.left {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.left .info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--cinza-escuro);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.left img {
+    width: 12%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.left p {
+    color: var(--branco);
+    font-size: 16px;
+}
+
+/* Lado direito */
+.right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cinza-escuro);
+    gap: 20px;
+    padding: 0px 30px;
+    border-radius: 8px;
+}
+
+.formulario p {
+    margin: 5px 0;
+    font-size: 20px;
+}
+
+.formulario input,
+.formulario textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--branco);
+    background: transparent;
+    color: var(--branco);
+    border-radius: 4px;
+    font-size: 14px; 
+}
+
+textarea {
+    height: 80px;
+}
+
+.textCentralM {
+    position: relative;
+    color: var(--amarelo);
+    top: 20px;
+    font-size: 25px;
+    text-align: center;
+}
+
+.politica {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    font-size: 15px;
+    padding: 8px;
+}
+
+#politica {
+    position: relative;
+    right: 100px;
+}
+
+#politTexto {
+    position: relative;
+    right: 180px;
+}
+
+/* Input ajustado para ter um tamanho fixo e sem margens extras */
+.politica input {
+    padding: 5px;
+    border: 1px solid var(--branco); 
+    background: transparent; 
+    width: 200px; 
+    margin: 0; 
+}
+
+/* O label deve estar bem próximo ao input */
+.politica label {
+    margin: 0; 
+    white-space: nowrap; 
+}
+
+.botoes {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.botoes button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.botoes .simular {
+    background-color: var(--amarelo);
+    color: var(--branco);
+    border: 2px solid var(--amarelo);
+}
+
+.botoes .simular:hover {
+    background-color: var(--branco);
+    color: var(--amarelo);
+}
+
+.botoes .mensagem {
+    background-color: transparent;
+    color: var(--vermelho);
+    border: 2px solid var(--vermelho);
+}
+
+.botoes .mensagem:hover {
+    background-color: var(--vermelho);
+    color: var(--branco);
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .container-detalhes {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .left .info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

@@ -1,0 +1,52 @@
+/* Estilo básico da seção */
+.seminovos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    padding-top: 150px;
+    min-height: 60vh;
+}
+
+/* Logo na parte superior esquerda */
+.logo-containerSM {
+    align-self: flex-start; 
+}
+
+.logoImageSM {
+    position: absolute; 
+    top: 0; 
+    left: 5%; 
+    width: 520px; 
+    height: auto; 
+    border-radius: 5px; 
+}
+
+/* Imagem central */
+.central-image-containerSM {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: -20px; 
+}
+
+/* Ajuste da imagem central */
+.centralImageSM {
+    width: 100%; 
+    max-width: 600px; 
+    height: auto; 
+    border-radius: 8px;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+/* Título na parte inferior */
+.textoLogoSM {
+    width: 100%; 
+    max-width: 500px; 
+    height: 150px;
+    margin-top: -100px; 
+    text-align: center;
+    z-index: 2;
+}
