@@ -7,7 +7,7 @@ import featureImage2 from '../../../../assets/Home/carro-2.png'; // Imagem para 
 import featureImage3 from '../../../../assets/Home/carro-3.png'; // Imagem para Piloto Automático
 import { FaPlus } from 'react-icons/fa';
 
-import './Header.css';
+import './header.css';
 
 function Header() {
 
