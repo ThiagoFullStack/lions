@@ -54,13 +54,14 @@
     flex-direction: column;
     background-color: var(--cinza-escuro);
     gap: 20px;
-    padding: 0px 30px;
-    border-radius: 8px;
+    padding: 30px 30px;
+    border-radius: 8px; 
 }
 
 .formulario p {
     margin: 5px 0;
     font-size: 20px;
+    margin-top: -5px;
 }
 
 .formulario input,
@@ -82,7 +83,7 @@ textarea {
 .textCentralM {
     position: relative;
     color: var(--amarelo);
-    top: 20px;
+    top: 0px;
     font-size: 25px;
     text-align: center;
 }
