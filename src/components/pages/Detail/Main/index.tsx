@@ -1,14 +1,45 @@
-
-import detailImage1 from "../../../../assets/Detail/1.png"
-import detailImage2 from "../../../../assets/Detail/2.png"
-import detailImage3 from "../../../../assets/Detail/3.png"
-import detailImage4 from "../../../../assets/Detail/4.png"
-import detailImage5 from "../../../../assets/Detail/5.png"
-import detailImage6 from "../../../../assets/Detail/6.png"
+import { useState, useEffect } from 'react';
+import detailImage1 from "../../../../assets/Detail/1.png";
+import detailImage2 from "../../../../assets/Detail/2.png";
+import detailImage3 from "../../../../assets/Detail/3.png";
+import detailImage4 from "../../../../assets/Detail/4.png";
+import detailImage5 from "../../../../assets/Detail/5.png";
+import detailImage6 from "../../../../assets/Detail/6.png";
 
 import './main.css';
 
 export default function DetalhesCarro() {
+    const [imagesLoaded, setImagesLoaded] = useState(false);
+
+    useEffect(() => {
+        const imagesToLoad = [
+            detailImage1, detailImage2, detailImage3, 
+            detailImage4, detailImage5, detailImage6
+        ];
+        let loadedCount = 0;
+
+        // Função para carregar as imagens
+        imagesToLoad.forEach((src) => {
+            const img = new Image();
+            img.src = src;
+            img.onload = () => {
+                loadedCount++;
+                if (loadedCount === imagesToLoad.length) {
+                    setImagesLoaded(true); // Marca como carregadas quando todas as imagens forem carregadas
+                }
+            };
+        });
+    }, []);
+
+    // Exibe um carregamento enquanto as imagens não estão carregadas
+    if (!imagesLoaded) {
+        return (
+            <div className="loading">
+                <p>Carregando conteúdo...</p>
+            </div>
+        );
+    }
+
     return (
         <section className="detalhes-carro">
             <div className="container-detalhes">
@@ -36,7 +67,7 @@ export default function DetalhesCarro() {
                     </div>
                     <div className="info">
                         <img src={detailImage6} alt="Detalhe 6" className="dlImage" />
-                        <p>Anúncio atualizado em: 24/08/2024</p>
+                        <p>Anúncio atualizado em: 24/08/2024</p>
                     </div>
                 </div>
 

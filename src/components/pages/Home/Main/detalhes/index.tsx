@@ -1,7 +1,25 @@
+import { useState, useEffect } from 'react';
 import './detalhes.css';
 import renegadeImage from '../../../../../assets/Home/carroDNA.png'; // Substitua pelo caminho da sua imagem
 
 export default function Jeep() {
+    const [imageLoaded, setImageLoaded] = useState(false);
+
+    useEffect(() => {
+        const preloadImage = async () => {
+            const img = new Image();
+            img.src = renegadeImage;
+            img.onload = () => setImageLoaded(true);
+            img.onerror = () => console.error('Erro ao carregar a imagem do Jeep Renegade.');
+        };
+
+        preloadImage();
+    }, []);
+
+    if (!imageLoaded) {
+        return <div className="loading-message">Carregando conteúdo...</div>;
+    }
+
     return (
         <section className="jeep-section">
             <h1 className="section-titleJeep">JEEP RENEGATE</h1>

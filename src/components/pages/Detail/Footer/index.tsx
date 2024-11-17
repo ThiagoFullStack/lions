@@ -1,10 +1,42 @@
-import './footer.css';
+import { useState, useEffect } from 'react';
 import leftImage1 from '../../../../assets/Home/quarto-card-yt .png'; // Imagem do YouTube
 import leftImage2 from '../../../../assets/Home/quarto-card-in .png'; // Imagem do WhatsApp
 import leftImage3 from '../../../../assets/Home/quarto-card-zp.png'; // Imagem do LinkedIn
 import rightImage from '../../../../assets/Home/footerLogo.png';
 
+import './footer.css';
+
 export default function Footer() {
+    const [imagesLoaded, setImagesLoaded] = useState(false);
+
+    useEffect(() => {
+        const imagesToLoad = [
+            leftImage1, leftImage2, leftImage3, rightImage
+        ];
+        let loadedCount = 0;
+
+        // Função para carregar as imagens
+        imagesToLoad.forEach((src) => {
+            const img = new Image();
+            img.src = src;
+            img.onload = () => {
+                loadedCount++;
+                if (loadedCount === imagesToLoad.length) {
+                    setImagesLoaded(true); // Marca como carregadas quando todas as imagens forem carregadas
+                }
+            };
+        });
+    }, []);
+
+    // Exibe um carregamento enquanto as imagens não estão carregadas
+    if (!imagesLoaded) {
+        return (
+            <div className="loading">
+                <p>Carregando conteúdo...</p>
+            </div>
+        );
+    }
+
     return (
         <div className="pageContainer">
             <div className="contentFooter">
@@ -39,4 +71,3 @@ export default function Footer() {
         </div>
     );
 }
-
