@@ -1,50 +1,60 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# #💻/ LionsSeminovos
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Welcome](./src/assets/Readme.png?raw=true)
 
-## Expanding the ESLint configuration
+📋 This project is the source code made by Visual Studio code where I commit to Github to upload to Vercel, available at:  - [vercel.com (https://vercel.com/)] Access the site ➡ (https://lions-git-master-thiagofullstacks-projects.vercel.app/ ).
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
+## 🎉 Start
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+
+### 📝 Pré-requisitos:
+
+You need to use Front-end.
+
+```
+* HTML
+* CSS
+* JAVASCRIPT
+* TYPESCRIP
+* REACT.JS
+* VITE
+* CSS 
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+## 📚 Library 🧠 
 ```
+   BUILD
+* npm create vite@latest
+* npm install 
+* npm install react-router-dom
+* npm install react-icons
+
+    RUN THE PROJECT
+* npm run dev
+
+    DEPLOY DO PROJETO
+* Import GitHub
+* Import Vercel
+```
+
+
+## 📁 Layout:
+
+We created the layout using VS Code. You can find the file [aqui](https://code.visualstudio.com/).
+
+## 🎮🎧 Author: ⚽💻 
+
+* 😎 **Thiago (Caetano) DevRoot** - [LinkedIn](https://www.linkedin.com/in/thiagocb2-developer-fullstack/)
+
+* 💻🖱 **ThiagoFullStack** - [GitHub](https://github.com/ThiagoFullStack/lions)
+
+* 🎞 **Thiago Caetano** - [Site](https://www.linkedin.com/in/thiagocb2-developer-fullstack/)
+
+<br><br><br>
+
+
