@@ -1,4 +1,4 @@
-# React + TypeScript + Vite
+# Desafio LionsSeminovos
 
 # #💻/ LionsSeminovos
 
